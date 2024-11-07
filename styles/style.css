@@ -36,3 +36,28 @@ ul,
 ol {
   list-style: none;
 }
+
+.content {
+  margin: 0 auto;
+  display: flex;
+  align-items: end;
+  width: 1140px;
+  height: 534px;
+  gap: 30px;
+}
+
+.search-form {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.content__details {
+  width: 100%;
+}
+
+.content__list {
+  height: 298px;
+  overflow-y: scroll;
+  padding-top: 26px;
+}
