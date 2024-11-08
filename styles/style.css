@@ -59,7 +59,8 @@ ol {
 .content__list {
   height: 298px;
   overflow-y: scroll;
-  padding-top: 26px;
+margin-top: 26px;
+  position: relative;
 }
 
 .result__video-container {
@@ -67,6 +68,7 @@ ol {
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .result__video {
@@ -75,8 +77,8 @@ ol {
   object-fit: cover;
 }
 
-.content__list-item:not(:last-of-type) {
-  padding-bottom: 30px;
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .content__video-card {
@@ -88,5 +90,9 @@ ol {
   width: 194px;
   height: 103px;
   object-fit: cover;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
 }
 
