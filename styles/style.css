@@ -9,6 +9,8 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -37,74 +39,69 @@ ol {
   list-style: none;
 }
 
+/*весь контент*/
+
 .content {
-  margin: 0 auto;
   display: flex;
-  align-items: end;
-  width: 1140px;
-  height: 534px;
+  align-items: flex-end;
   gap: 30px;
+  inline-size: 1140px;
+  margin-left: 30px;
+  margin-bottom: 134px;
 }
+
+/*блок с видео и формами*/
+
+.result {
+  block-size: 456px;
+}
+
+/*контейнер с главным видео*/
+
+.result__video-container {
+  position: relative;
+  inline-size: 711px;
+  block-size: 386px;
+  margin-bottom: 16px;
+  
+}
+
+/*главное видео*/
+
+.result__video{
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+/*форма под основным видео*/
 
 .search-form {
   display: flex;
-  align-items: start;
-  justify-content: start;
-  gap: 40px;
-  width: fit-content;
-}
-
-.content__details {
-  width: 100%;
-}
-
-.content__list {
-  height: 298px;
-  overflow-y: scroll;
-  margin-top: 26px;
-  position: relative;
-}
-
-.result__video-container {
-  display: flex;
-  width: 711px;
-  height: 386px;
-  margin-bottom: 16px;
-  position: relative;
-}
-
-.result__video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.content__list-item:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-.content__video-card {
-  display: flex;
+  align-self: flex-end;
   justify-content: space-between;
+  block-size: 54px;
 }
 
-.content__video-card-thumbnail {
-  width: 194px;
-  height: 103px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.content__video-card-description-container {
-  flex-grow: 1;
-}
+/*заголовок инпутов под видео*/
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed';
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
+  
 }
+
+/*заголовок и список видео*/
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  inline-size: 399px;
+  block-size: 534px;
+}
+
+/*Заголовок*/
 
 .title{
   font-family: 'Oswald';
@@ -112,32 +109,51 @@ ol {
   font-weight: 700;
   line-height: 70.5px;
   text-transform: uppercase;
+  margin-bottom: 26px;
 }
 
 .content__accent {
-  opacity: 20%;
+  color: rgb(84, 80, 80);
 }
 
-.content__card-link {
-  text-decoration: none;
+/*список видео*/
+
+.content__list {
+  position: relative;
+  block-size: 298px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+/*отступы элемента списока с видео*/
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__card-link{
   color: #fff;
+  text-decoration: none;
 }
 
-.content__video-card-title {
-  font-family: 'Oswald';
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 30px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+/*контент видео из списка*/
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
 }
 
-.content__video-card-description {
-  font-family: 'Fira Sans Condensed';
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 16.2px;
+.content__video-card-description-container {
+  inline-size: 100%;
 }
+
+.content__video-card-thumbnail {
+  inline-size: 194px;
+  block-size: 103px;
+  object-fit: cover;
+}
+
+/*скрываем лейблы и чекбоксы для стилизации*/
 
 .visually-hidden {
   position: absolute;
@@ -147,73 +163,4 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
-} 
-
-.search-form__fieldset {
-  display: flex;
-  flex-direction: column;
-  border: 0;
-  gap: 5px;
-  width: fit-content;
-  height: 54px;
-  
-}
-
-.search-form__label {
-  display: flex;
-  cursor: pointer;
-}
-
-.search-form__textfield {
-  display: flex;
-  background: transparent;
-  border: 1px solid #fff;
-  border-left: 0;
-  border-right: 0;
-  font-family: 'Fira Sans Condensed';
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.6px;
-  color: #fff;
-  width: 225px;
-  appearance: none;
-}
-
-.search-form__checkbox-list {
-  display: flex;
-  justify-content: space-between;
-  width: 212px;
-  height: 49px;
-}
-
-.search-form__pseudo-checkbox {
-  width: 19px;
-  height: 19px;
-  border: 1px solid #fff;
-  display: inline-block;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
-.button{
-  margin-top: auto;
-  cursor: pointer;
-  background: transparent;
-  color: #fff;
-  font-family: 'Fira Sans Condensed';
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 21.6px;
-  border: 1px solid #fff;
-}
-
-.search-form__submit-button {
-  width: 194px;
-  height: 34px;
-}
-
-.more-button {
-  text-align: center;
-  width: 399px;
-  height: 34px;
 }
