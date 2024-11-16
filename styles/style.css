@@ -89,7 +89,7 @@ ol {
   font-weight: 400;
   line-height: 21.6px;
   cursor: default;
-  padding-bottom: 2px;
+  padding-bottom: 5px;
 }
 
 .search-form__label {   /*блок под заголовками форм текста и чекбокса*/
@@ -116,6 +116,7 @@ ol {
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
+  color: #fff;
 }
 
 .search-form__textfield:focus {   /*инпут для поиска города по названию в состоянии фокуса*/
@@ -207,7 +208,7 @@ ol {
   font-weight: 700;
   line-height: 70.5px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   cursor: default;
 }
 
@@ -218,8 +219,8 @@ ol {
 .content__list {   /*список видео*/
   position: relative;
   block-size: 298px;
+  inline-size: 414px;
   overflow: auto;
-  scrollbar-width: none;
 }
 
 .content__list-item {   /*элемента списка видео*/
@@ -272,7 +273,7 @@ ol {
   flex-direction: column;
   flex: 1;
   block-size: 101px;
-  margin-bottom: 6px;
+  margin-bottom: 9px;
 }
 
 .content__video-card-title {   /*блок с заголовка внутри ссылки*/
